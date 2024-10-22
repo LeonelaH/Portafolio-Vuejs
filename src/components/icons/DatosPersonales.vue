@@ -17,11 +17,11 @@ const telefono = '+54 9 2604-685245';
     <section class="datos-personales">
         <div class="card">
           <h1>{{ title }}</h1>
-          <h2>{{ descripcion }}</h2>
+          <h5>{{ descripcion }}</h5>
           <p>{{ presentacion }}</p>
           <ul class="container-lista">
             <li v-for="red in redesSociales" :key="red.id"> 
-              <a :href="red.url"><img class="icon-redsocial" :src= "red.src" width="35rem" :alt="red.name"></a>
+              <c :href="red.url"><img class="icon-redsocial" :src= "red.src" width="38rem" :alt="red.name"></c>
             </li>
           </ul>
           <h3> Mi telefono personal: {{ telefono }}</h3>
@@ -31,18 +31,26 @@ const telefono = '+54 9 2604-685245';
 </template>
 
 <style scopped>
-h1 {
+h1{
+  color:rgb(248, 246, 246);
   font-size: 2.5rem;
 }
+h5{
+  font-size: 2rem;
+  color:rgb(243, 242, 242);
+  margin-bottom: 1,5rem;
+  text-align: center;
+}
 
-p {
+p{
+  color:aliceblue;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .card{
-  background-color: black;
+  background: linear-gradient(to right, #cf0c0c, #1616b6);
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
@@ -62,14 +70,20 @@ p {
   border-radius: 50%;
   padding: 2px;
   margin: 5px;
-  box-shadow: 0 0 5px rgb(95, 124, 204, 0.934);
+  box-shadow: 0 0 5px rgba(10, 10, 10, 0.934);
+
 }
-.icon-redsocial:hover{
-  background-color: black;
+.icon-redsocial:hover {
+  background-color: white;
   box-shadow: 0 0 5px rgb(235, 223, 218);
+  border: none;
 }
+
 h3{
   font-size: 1.2rem;
   font-weight: 600;
+}
+h4{
+  color:aliceblue;
 }
 </style>

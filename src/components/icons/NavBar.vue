@@ -23,7 +23,7 @@ const navegacion= ref([
 
 <style coped>
 .navbar {
-  background-color:var(--vt-c-indigo);
+  background: linear-gradient(to right, #ce1111, #1b1bb4);
   color: #fff;
   padding: 0.5rem 1rem;
   align-items: center;
@@ -41,8 +41,9 @@ const navegacion= ref([
   list-style: none;
 }
 a {
-  border: 1px solid ;
-  border-color: hsla(160, 100%, 37%, 0.2);
+  color:rgb(250, 248, 248);
+  border: 1px solid;
+  border-color: transparent;
   border-radius: 5px;
   /* Elimina la subrayado de los enlaces y elementos con clase "green" */
   text-decoration: none;
@@ -50,11 +51,16 @@ a {
   transition: 0.4s;
   /* Añade padding alrededor del contenido */
   padding: 5px;
+  outline: none;
+  
 }
 
 a:hover {
   /* Cambia el color de fondo al pasar el mouse sobre un enlace */
-  background-color: hsla(150, 11%, 96%, 0.938);
+  border-color: white; /* Cambia el borde a blanco al pasar el mouse */
+  background-color: transparent; /* Mantiene el fondo transparente */
+  /*background-color: hsla(160, 100%, 32%, 0.2);*/
+  outline: none;
 }
 
 @media (max-width: 768px) {
