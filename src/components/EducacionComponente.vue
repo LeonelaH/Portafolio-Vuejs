@@ -30,6 +30,7 @@
   position: relative;
   max-width: 800px;
   margin: 20px auto;
+  color:azure;
 }
 .timeline::after {
   content: '';

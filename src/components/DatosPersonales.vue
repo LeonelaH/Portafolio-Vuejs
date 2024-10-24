@@ -30,7 +30,7 @@ const telefono = '+54 9 2604-685245';
     </section>
 </template>
 
-<style scopped>
+<style scoped>
 h1{
   color:rgb(248, 246, 246);
   font-size: 2.5rem;
