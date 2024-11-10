@@ -1,41 +1,63 @@
 <script setup>
+import img1 from '/src/components/icons/python.svg';
+import img2 from '/src/components/icons/javascript.svg';
+import img3 from '/src/components/icons/java.svg';
+import img4 from '/src/components/icons/c++.svg';
+
+import img5 from '/src/components/icons/vuejs.svg';
+import img6 from '/src/components/icons/django.svg';
+import img7 from '/src/components/icons/nodejs.svg';
+import img8 from '/src/components/icons/reactjs.svg';
+
+import img9 from '/src/components/icons/git.svg';
+import img10 from '/src/components/icons/visualstudiocode.svg';
+import img11 from '/src/components/icons/cypress.svg';
+import img12 from '/src/components/icons/selenium.svg';
+
+import img13 from '/src/components/icons/mysql.svg';
+import img14 from '/src/components/icons/oracle.svg';
+
+import img15 from '/src/components/icons/español.svg';
+import img16 from '/src/components/icons/ingles.svg';
+import img17 from '/src/components/icons/portugues.svg';
+
 import { ref } from 'vue';
 const habilidades = ref([
     {
         id: 1, nombre: 'Lenguajes de Programación', habilidades: [
-            { id: 1, nombre: 'Python', nivel:'Intermedio', icono: '/src/components/icons/python.svg'},
-            { id: 2, nombre: 'JavaScript', nivel:'Avanzado', icono: '/src/components/icons/javascript.svg'},
-            { id: 3, nombre: 'Java', nivel:'Avanzado', icono: '/src/components/icons/java.svg'},
-            { id: 4, nombre: 'C++', nivel:'Intermedio', icono: '/src/components/icons/c++.svg'}
+            { id: 1, nombre: 'Python', nivel:'Intermedio', icono: img1},
+            { id: 2, nombre: 'JavaScript', nivel:'Avanzado', icono: img2},
+            { id: 3, nombre: 'Java', nivel:'Avanzado', icono: img3},
+            { id: 4, nombre: 'C++', nivel:'Intermedio', icono: img4}
         ]
     },
     {   
         id: 2, nombre: 'Frameworks y Librerias', habilidades: [
-            { id: 1, nombre: 'Vue.js', nivel:'Avanzado', icono: '/src/components/icons/vuejs.svg'},
-            { id: 2, nombre: 'Django', nivel:'Intermedio', icono: '/src/components/icons/django.svg'},
-            { id: 3, nombre: 'Node.js', nivel:'Avanzado', icono: '/src/components/icons/nodejs.svg'},
-            { id: 4, nombre: 'React.js', nivel:'Avanzado', icono: '/src/components/icons/reactjs.svg'}
+            { id: 1, nombre: 'Vue.js', nivel:'Avanzado', icono: img5},
+            { id: 2, nombre: 'Django', nivel:'Intermedio', icono: img6},
+            { id: 3, nombre: 'Node.js', nivel:'Avanzado', icono: img7},
+            { id: 4, nombre: 'React.js', nivel:'Avanzado', icono: img8}
         ]
     },
     {   
         id:3, nombre: 'Herramientas y Software', habilidades: [
-           {id: 1, nombre: 'Git', nivel:'Avanzado', icono: '/src/components/icons/git.svg'},
-           {id: 2, nombre: 'Visual Studio', nivel:'Avanzado', icono: '/src/components/icons/visualstudiocode.svg'},
-           {id: 3, nombre: 'Cypress', nivel:'Intermedio', icono: '/src/components/icons/cypress.svg'},
-           {id: 4, nombre: 'Selenium', nivel:'Intermedio', icono: '/src/components/icons/selenium.svg'}
+           {id: 1, nombre: 'Git', nivel:'Avanzado', icono: img9},
+           {id: 2, nombre: 'Visual Studio', nivel:'Avanzado', icono: img10},
+           {id: 3, nombre: 'Cypress', nivel:'Intermedio', icono: img11},
+           {id: 4, nombre: 'Selenium', nivel:'Intermedio', icono: img12}
         ]
     },
     {   
         id:4, nombre: 'Base de Datos', habilidades: [
-           {id: 1, nombre: 'MySQL', nivel:'Avanzado', icono: '/src/components/icons/mysql.svg'},
-           {id: 2, nombre: 'Oracle', nivel:'Intermedio', icono: '/src/components/icons/oracle.svg'}
+           {id: 1, nombre: 'MySQL', nivel:'Avanzado', icono: img13},
+           {id: 2, nombre: 'Oracle', nivel:'Intermedio', icono: img14}
         ]
     },
     {   
         id:5, nombre: 'Idiomas', habilidades: [
-           {id: 1, nombre: 'Español', nivel:'Nativo', icono: '/src/components/icons/español.svg'},
-           {id: 2, nombre: 'Ingles', nivel:'Avanzado', icono: '/src/components/icons/ingles.svg'},
-           {id: 3, nombre: 'Portugues', nivel:'Intermedio', icono: '/src/components/icons/portugues.svg'}
+           {id: 1, nombre: 'Español', nivel:'Nativo', icono: img15},
+           {id: 2, nombre: 'Ingles', nivel:'Avanzado', icono: img16},
+           {id: 3, nombre: 'Portugues', nivel:'Intermedio', icono: img17}
         ]
     }
 ]);

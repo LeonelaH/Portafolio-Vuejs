@@ -1,13 +1,19 @@
 <script setup>
+import icono1 from '/src/assets/vuejs.svg';
+import icono2 from '/src/assets/api.svg';
+import icono3 from '/src/assets/computer.svg';
+import icono4 from '/src/assets/heroku.svg';
+import icono5 from '/src/assets/git.svg';
+
 import {ref} from 'vue';
 const titulo='Desarrollador Web';
 const fecha='Desde Enero 2021 / Octubre 2024';
 const experiencias= ref([
-    {id:1, src:'/src/assets/vuejs.svg', parrafo: 'He desarrollado aplicaciones web utilizando frameworks como Vue.js y React, enfocándome en crear interfaces de usuario intuitivas y responsivas.'},
-    {id:2, src:'/src/assets/api.svg', parrafo: 'En varios proyectos, he integrado APIs RESTful, optimizando la comunicación entre el frontend y el backend para mejorar la experiencia del usuario.'},
-    {id:3, src:'/src/assets/computer.svg', parrafo: 'He trabajado en la optimización de tiempos de carga y rendimiento, implementando técnicas como lazy loading, minificación de archivos y almacenamiento en caché.'},
-    {id:4, src:'/src/assets/heroku.svg', parrafo: 'Tengo experiencia en el despliegue de aplicaciones web en entornos de producción utilizando plataformas como Netlify y Heroku, optimizando la entrega continua.'},
-    {id:5, src:'/src/assets/git.svg', parrafo: 'He trabajado con herramientas de control de versiones como Git, facilitando la colaboración y el seguimiento de cambios en equipos de desarrollo ágiles.'},
+    {id:1, src: icono1, parrafo: 'He desarrollado aplicaciones web utilizando frameworks como Vue.js y React, enfocándome en crear interfaces de usuario intuitivas y responsivas.'},
+    {id:2, src: icono2, parrafo: 'En varios proyectos, he integrado APIs RESTful, optimizando la comunicación entre el frontend y el backend para mejorar la experiencia del usuario.'},
+    {id:3, src: icono3, parrafo: 'He trabajado en la optimización de tiempos de carga y rendimiento, implementando técnicas como lazy loading, minificación de archivos y almacenamiento en caché.'},
+    {id:4, src: icono4, parrafo: 'Tengo experiencia en el despliegue de aplicaciones web en entornos de producción utilizando plataformas como Netlify y Heroku, optimizando la entrega continua.'},
+    {id:5, src: icono5, parrafo: 'He trabajado con herramientas de control de versiones como Git, facilitando la colaboración y el seguimiento de cambios en equipos de desarrollo ágiles.'},
 ]);
 </script>
 

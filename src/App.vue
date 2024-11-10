@@ -39,7 +39,7 @@ import Intereses from './components/InteresesComponente.vue';
    </main>
    <footer>
       <a href="#top">Inicio</a>
-      <p>© 2024 Leonela Huanca - Portafolio web</p>
+      <p>© 2024 Leonela Huanca - Portafolio web - UTN FRSR</p>
    </footer>
 </template>
 
