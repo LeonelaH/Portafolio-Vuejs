@@ -58,11 +58,13 @@ const habilidades = ref([
 <style scoped>
 .skills-contenedor {
     padding: 2rem;
-    background-image: url('/src/assets/imagen.jpg');/*imagen de fondo*/
+    /*background-image: url('/src/assets/imagen.jpg');
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
+    background: linear-gradient(-45deg, #1c34b9,#3bbbcc,#7e0b7e,#e9f549,#5ee942);
+    border-radius: 15px;
 }
 .skills-categoria{
     margin-bottom: 20px;
@@ -94,7 +96,7 @@ const habilidades = ref([
     max-width: 250px;
 }
 .skill:hover{
-    background-color: #f887d6;
+    background-color: #837b81;
 }
 .skill img{
     width: 35px;

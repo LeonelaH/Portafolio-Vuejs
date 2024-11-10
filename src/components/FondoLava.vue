@@ -1,127 +1,77 @@
+
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { onMounted, ref } from 'vue';
+const colors = ["#e03776", "#8f3e98", "#4687bf", "#3bab6f", "#f9c25e", "#f47274"] ;
+const SVG_NS = 'http://www.w3.org/2000/svg';
+const SVG_XLINK = "http://www.w3.org/1999/xlink";
 
-const followElement = ref(null);
+let heartsRy = [];
+const hearts = ref(null); // Referencia al SVG
 
-const handleMouseMove = (event) => {
-  if (followElement.value) {
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
+function useTheHeart(n) {
+  let use = document.createElementNS(SVG_NS, 'use');
+  use.n = n;
+  use.setAttributeNS(SVG_XLINK, 'xlink:href', '#heart');
+  use.setAttributeNS(null, 'transform', `scale(${use.n})`);
+  use.setAttributeNS(null, 'fill', colors[n % colors.length]);
+  use.setAttributeNS(null, 'x', -69);
+  use.setAttributeNS(null, 'y', -69);
+  use.setAttributeNS(null, 'width', 138);
+  use.setAttributeNS(null, 'height', 138);
 
-    const elementWidth = followElement.value.offsetWidth;
-    const elementHeight = followElement.value.offsetHeight;
-
-    const newX = mouseX - elementWidth / 2;
-    const newY = mouseY - elementHeight / 2;
-
-    followElement.value.style.left = `${newX}px`;
-    followElement.value.style.top = `${newY}px`;
-  }
-};
-
+  heartsRy.push(use);
+  hearts.value.appendChild(use); // Añadir el símbolo al SVG referenciado
+}
 onMounted(() => {
-  document.body.addEventListener('mousemove', handleMouseMove);
-});
+  // Crear los corazones al montar el componente
+  for (let n = 18; n >= 0; n--) {
+    useTheHeart(n);
+  }
 
-onUnmounted(() => {
-  document.body.removeEventListener('mousemove', handleMouseMove);
+  function Frame() {
+    window.requestAnimationFrame(Frame);
+    for (let i = 0; i < heartsRy.length; i++) {
+      if (heartsRy[i].n < 18) {
+        heartsRy[i].n += 0.01;
+      } else {
+        heartsRy[i].n = 0;
+        hearts.value.appendChild(heartsRy[i]);
+      }
+      heartsRy[i].setAttributeNS(null, 'transform', `scale(${heartsRy[i].n})`);
+    }
+  }
+  Frame(); // Iniciar la animación
 });
 </script>
 
 <template>
-  <div class="canvas">
-    <div class="blur">
-      <div class="circle circle-center"></div>
-      <div class="circle circle-followed" ref="followElement"></div>
-    </div>
-    <div class="filter filter-dodge"></div>
-    <div class="filter filter-burn"></div>    
+  <div>
+    <svg ref="hearts" id="hearts" viewBox="-600 -400 1200 800" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <symbol id="heart" viewBox="-69 -16 138 138">
+          <path d="M0,12
+                   C 50,-30 110,50  0,120
+                   C-110,50 -50,-30 0,12z" />
+        </symbol>
+      </defs>
+    </svg>
   </div>
 </template>
 
 <style scoped>
 
 body {
-  height: 100vh;
-  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
   overflow: hidden;
+  background-color: blueviolet;
 }
-
-.canvas {
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  position: absolute;
-  background: lemonchiffon;
-  overflow: hidden;
-  mix-blend-mode: screen;
-}
-
-.blur {
-  filter: blur(40px);
-  height: 100%;
-}
-
-.circle-followed {
-  cursor: none;
-  background: radial-gradient(circle, #00DBDE, #8d138f);
-  border: 2px solid rgba(255, 255, 255, 0.3); 
-  width: 150px; 
-  aspect-ratio: 1 / 1;
-}
-
-.filter {
-  pointer-events: none;
+svg {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.filter-dodge {
-  background: #3f95af;
-  mix-blend-mode: color-dodge;
-}
-
-.filter-burn {
-  background: black;
-  mix-blend-mode: color-burn;
-}
-
-.circle {
-  position: absolute;
-  display: block;
-  width: 200px;
-  aspect-ratio: 1 / 1;
-  background: black;
-  border-radius: 100%;
-  margin-bottom: 10px;
-}
-
-.circle-center {
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-body:not(:hover) .circle-followed {
-  animation: move 3s cubic-bezier(0, 0.37, 1, 0.66) infinite;
-  animation-direction: alternate-reverse;
-}
-
-@keyframes move {
-  0% {
-    top: -10%;
-    left: -10%;
-  }
-
-  100% {
-    top: 80%;
-    left: 80%;
-  }
+  width: 100%;
+  height: 95%;
+  z-index: -1;
+  border-radius: 5px;
 }
 
 </style>

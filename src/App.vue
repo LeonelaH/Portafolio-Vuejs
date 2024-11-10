@@ -45,7 +45,7 @@ import Intereses from './components/InteresesComponente.vue';
 
 <style scoped>
 a{
-   color:black;
+   color:rgb(248, 248, 248);
 }
 footer{
    display: flex;
@@ -53,6 +53,6 @@ footer{
    align-items: center;
    padding: 2rem;
    font-size: 1.3rem;
-   color:black;
+   color:rgb(250, 246, 246);
 }
 </style>

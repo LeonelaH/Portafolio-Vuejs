@@ -56,9 +56,10 @@ misProyectos.value = ([
     gap: 20px;
     padding: 20px;
     justify-content: center;
-    background: linear-gradient(-45deg, #9309b6, #2077e0);
+    background: linear-gradient(-45deg, #af1de9,#3d1adb,#20d3e0);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+    border-radius: 15px;
 }
 @keyframes gradient{
     0%{

@@ -7,7 +7,7 @@ const redesSociales =[
    { id: 1, name: 'Linkedin', src:'/src/assets/linkedin_icon.svg', url:'https:/www.linkedin.com/in/leonela-huanca/' },
    { id: 2, name: 'Instagram', src:'/src/assets/instagram_icon.svg', url:'https:/www.instagram.com/leonela-huanca/' },
    { id: 3, name: 'Github', src:'/src/assets/github_icon.svg', url:'https:/www.github.com/leonela-huanca/ '},
-   { id: 4, name: 'Curriculum', src:'/src/assets/curriculum_icon.svg', url:'https:/www.curriculum.com/leonela-huanca/ '}, 
+   { id: 4, name: 'Curriculum', src:'/src/assets/curriculum_icon.svg', url:'https:/www.curriculum.com/leonela-huanca/ '} 
 ];
 const telefono = '+54 9 2604-685245';
 </script>
@@ -51,8 +51,8 @@ p{
 
 .card{
   background: linear-gradient(to right, #cf0c0c, #1616b6);
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 15px;
+  padding: 15px;
   margin: 10px;
   text-align: center;
 }
@@ -64,10 +64,10 @@ p{
   margin: 0;
   text-align: center;
 }
-.icon-redsocial{
+/*.icon-redsocial{
   align-items: center;
-  background-color: aliceblue;
-  border-radius: 50%;
+  background-color: transparent;
+  border-radius: 46%;
   padding: 2px;
   margin: 5px;
   box-shadow: 0 0 5px rgba(10, 10, 10, 0.934);
@@ -77,6 +77,17 @@ p{
   background-color: white;
   box-shadow: 0 0 5px rgb(235, 223, 218);
   border: none;
+}*/
+.icon-redsocial {
+  filter: invert(75%);
+  transition: 0.2s;
+  padding: 2px;
+  margin: 6px;
+}
+
+.icon-redsocial:hover {
+  filter: invert(100%);
+  transition: 0.2s;
 }
 
 h3{

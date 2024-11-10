@@ -4,13 +4,13 @@
   --vt-c-white-soft: #020202;
   --vt-c-white-mute: #070707;
 
-  --vt-c-black: #f7f4f6dc;
-  --vt-c-black-soft: #faf5f5;
-  --vt-c-black-mute: #faf3f3;
+  --vt-c-black: #000000f6;
+  --vt-c-black-soft: #000000f8;
+  --vt-c-black-mute: #000000f5;
 
   --vt-c-indigo: #764cc4;
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-1: rgba(0, 0, 0, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
   --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
   --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
@@ -96,11 +96,11 @@ section{
 }
 section h2{
   font-size: 2rem;
-  color:rgb(0, 0, 0);
+  color:white;
   margin-bottom: 1,5rem;
   text-align: center;
 }
 
 section h3{
-  color:rgb(248, 246, 246);
+  color:rgb(245, 238, 238);
 }

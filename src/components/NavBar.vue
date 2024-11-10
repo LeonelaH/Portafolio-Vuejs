@@ -21,7 +21,7 @@ const navegacion= ref([
 
 </script>
 
-<style coped>
+<style scoped>
 .navbar {
   background: linear-gradient(to right, #ce1111, #1b1bb4);
   color: #fff;
@@ -36,9 +36,11 @@ const navegacion= ref([
 .navbar-menu {
   display: flex;
   justify-content: flex-end;
+  
 }
 .nav-list{
   list-style: none;
+  
 }
 a {
   color:rgb(250, 248, 248);

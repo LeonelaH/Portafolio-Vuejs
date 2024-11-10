@@ -34,7 +34,7 @@ const intereses = ref([
     list-style-type: none;
     padding: 1rem;
     margin-bottom: .5rem;
-    color: var(--vt-c-white-soft);
+    color: rgb(255, 255, 255);
     font-size: 1.4rem;
     z-index: 2;
 }

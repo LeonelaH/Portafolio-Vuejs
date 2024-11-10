@@ -36,10 +36,10 @@
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #181717;
+  background-color: #e0d4e0;
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: 49%;
   margin-left: -3px;
 }
 .container {
@@ -74,10 +74,10 @@
   content: " ";
   position: absolute;
   top: 15px;
-  left: -15px;
+  right: -15px;
   border-width: 15px;
   border-style: solid;
-  border-color: transparent transparent transparent rgb(5, 207, 207);
+  border-color: transparent transparent transparent rgb(5, 207, 55);
 }*/
 .container.left .content {
   margin-left: 20px;
@@ -91,7 +91,7 @@ h2 {
 /* Media queries para dispositivos móviles */
 @media screen and (max-width: 768px) {
   .timeline::after {
-    left: 10px;
+    left: 15px;
   }
   .container {
     width: 100%;
