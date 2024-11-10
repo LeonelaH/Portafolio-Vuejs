@@ -24,7 +24,7 @@ const telefono = '+54 9 2604-685245';
               <c :href="red.url"><img class="icon-redsocial" :src= "red.src" width="38rem" :alt="red.name"></c>
             </li>
           </ul>
-          <h3> Mi telefono personal: {{ telefono }}</h3>
+          <h3>☏ Mi telefono personal: {{ telefono }}</h3>
           <h4>{{ residencia }}</h4>
         </div>
     </section>

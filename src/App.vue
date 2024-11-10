@@ -5,10 +5,11 @@ import Educacion from './components/EducacionComponente.vue';
 import Experiencia from './components/ExperienciaComponente.vue';
 import Proyectos from './components/ProyectosComponente.vue';
 import Habilidades from './components/HabilidadesComponente.vue';
+import Intereses from './components/InteresesComponente.vue';
 </script>
 
 <template>
-   <header>
+   <header id="top">
       <!--Barra de Navegacion-->
       <NavBar/>
       <!--Componente datos personales-->
@@ -31,10 +32,27 @@ import Habilidades from './components/HabilidadesComponente.vue';
       <!--Componente habilidades-->
       <Habilidades/>
    </section>
-   <section id="intereses"><h2>Intereses</h2></section>
+   <section id="intereses"><h2>Intereses</h2>
+      <!--Componente intereses-->
+      <Intereses/>
+   </section>
    </main>
+   <footer>
+      <a href="#top">Inicio</a>
+      <p>© 2024 Leonela Huanca - Portafolio web</p>
+   </footer>
 </template>
 
 <style scoped>
-
+a{
+   color:black;
+}
+footer{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 2rem;
+   font-size: 1.3rem;
+   color:black;
+}
 </style>
