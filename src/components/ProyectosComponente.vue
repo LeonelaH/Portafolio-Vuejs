@@ -40,10 +40,10 @@ misProyectos.value = ([
                 <h3>{{ proyecto.titulo }}</h3>
                 <p>{{ proyecto.descripcion }}</p>
                 <div class="proyecto-links">
-                    <a :href="proyecto.proyectoLink" clas="btn-ver-mas" target="_blank" rel="noopener noreferrer">Ver
+                    <a :href="proyecto.proyectoLink" class="btn-ver-mas" target="_blank" rel="noopener noreferrer">Ver
                         Proyecto</a>
-                    <a :href="proyecto.githubLink" class="github-link" target="_blank" rel="noopener noreferrer">Ver
-                       Codigo en Github</a>
+                    <a :href="proyecto.githubLink" class="github-link" target="_blank" rel="noopener noreferrer">Ver 
+                        Codigo en Github</a>
                 </div>
             </div>
         </li>
@@ -106,10 +106,29 @@ misProyectos.value = ([
     font-size: 1em;
     color: #f4f0f5;
 }
-.proyecto-links{
+.proyecto-links {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
+}
+.proyecto-links .btn-ver-mas {
+    background-color: #ae00ff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.proyecto-links .btn-ver-mas:hover {
+    background-color: #880899;
+}
+.proyecto-links .github-link {
+    color: #4975d3;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+.proyecto-links .github-link:hover{
+    text-decoration: underline;
 }
 </style>
